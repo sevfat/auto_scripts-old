@@ -38,7 +38,7 @@ jobs:
       - name: 🔐 检出私有仓库
         uses: actions/checkout@v4
         with:
-          repository: jyucoeng/auto_login_lunes_private
+          repository: doraemon6789/auto_login_lunes_private
           token: ${{ secrets.PRIVATE_REPO_TOKEN }}
           ref: main
           path: ${{ github.repository_owner }}-${{ github.event.repository.name }}-${{ env.PROJECT_DIR }}
@@ -146,3 +146,4 @@ jobs:
             git push -f origin HEAD:main
             echo "✅ 更改已推送"
           fi
+
