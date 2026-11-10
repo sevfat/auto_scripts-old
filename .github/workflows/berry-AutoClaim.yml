@@ -31,7 +31,7 @@ jobs:
       - name: 📥 检出私有仓库
         uses: actions/checkout@v4
         with:
-          repository: jyucoeng/auto_berry_renew_private
+          repository: doraemon6789/auto_berry_renew_private
           token: ${{ secrets.PRIVATE_REPO_TOKEN }}
           ref: main
           path: ${{ github.repository_owner }}-${{ github.event.repository.name }}-${{ env.PROJECT_DIR }}
@@ -90,3 +90,4 @@ jobs:
             git push origin main
             echo "✅ 更改已推送到公开库"
           fi
+
