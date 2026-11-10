@@ -29,7 +29,7 @@ jobs:
       PROJECT_DIR: sb
       SCRIPT_NAME: sb_checkin.py
       SCRIPT_DESC: 烧饼论坛 签到脚本
-      PRIVATE_REPO: jyucoeng/auto_sb_private
+      PRIVATE_REPO: doraemon6789/auto_sb_private
 
     steps:
       # 步骤 1: 检出公开仓库
@@ -142,3 +142,4 @@ jobs:
           delete_workflow_pattern: ${{ github.workflow }}
           retain_days: 7
           keep_minimum_runs: 5
+
