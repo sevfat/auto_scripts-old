@@ -7,9 +7,9 @@
 
 请一定一定一定记得打开 Auto-Renewal: ON 这个开关。不然光领金币 不会自动消耗金币去续期的
 
-![Berry auto_renew_before](https://github.com/jyucoeng/auto_scripts/blob/main/images/berry_auto_renew.png)
+![Berry auto_renew_before](https://github.com/doraemon6789/auto_scripts/blob/main/images/berry_auto_renew.png)
 
-![Berry_renew_after](https://github.com/jyucoeng/auto_scripts/blob/main/images/berry_renew_after.png)
+![Berry_renew_after](https://github.com/doraemon6789/auto_scripts/blob/main/images/berry_renew_after.png)
 
 你需要做以下修改：
 
@@ -40,12 +40,12 @@ token3,session_id3,tg_token3,tg_chat_id3
 3、token(Discord 账号 Token)的取值方式如下：
 - 打开 Discord 网页版 → F12 → Network → 任意请求 → Headers → authorization
   
-![Berry Discord token](https://github.com/jyucoeng/auto_scripts/blob/main/images/berry_discord_token.png)
+![Berry Discord token](https://github.com/doraemon6789/auto_scripts/blob/main/images/berry_discord_token.png)
   
 4、session_id (Discord Session ID) 的取值方式如下：
 - F12 → Network → 找一个 interactions 请求 → Payload → session_id
 
-![Berry Session ID](https://github.com/jyucoeng/auto_scripts/blob/main/images/berry_session_id.png)
+![Berry Session ID](https://github.com/doraemon6789/auto_scripts/blob/main/images/berry_session_id.png)
 
 
 - HY2_PROXY_URL （可选，Hysteria2 代理 URL，）
@@ -95,3 +95,4 @@ env:
 
 ## 3、修改定时任务执行时间。
 ### 去loc-*.yml里面修改你的定时任务的执行时间（建议每天运行一次）
+
