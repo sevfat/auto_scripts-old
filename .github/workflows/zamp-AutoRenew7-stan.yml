@@ -24,7 +24,7 @@ jobs:
       SOCKS_PORT: ${{ secrets.SOCKS_PORT || '10808' }}
       SCREENSHOT_DIR: screenshots
       PROJECT_DIR: zampto-stan
-      PRIVATE_REPO: jyucoeng/auto_zampto_private
+      PRIVATE_REPO: doraemon6789/auto_zampto_private
 
     steps:
       - name: 检出公开仓库
@@ -131,3 +131,4 @@ jobs:
           delete_workflow_pattern: ${{ github.workflow }}
           retain_days: 7
           keep_minimum_runs: 5
+
