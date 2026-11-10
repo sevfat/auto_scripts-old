@@ -62,7 +62,7 @@ jobs:
       SOCKS_PORT: ${{ secrets.SOCKS_PORT || '10808' }}
 
       # ── 路径 ────────────────────────────────────────────────────────
-      PRIVATE_REPO: jyucoeng/auto_woiden_private
+      PRIVATE_REPO: doraemon6789/auto_woiden_private
       PROJECT_DIR: woiden
       SCRIPT_NAME: woiden-renew.py
       SCREENSHOT_DIR: screenshots
@@ -383,3 +383,4 @@ jobs:
           echo "待删除 $count 条超过 24 小时的已完成记录（并发 10 路）"
           echo "$to_delete" | xargs -P 10 -I{} sh -c 'gh run delete "$1" --repo "$2" >/dev/null 2>&1 || true' _ {} "$GITHUB_REPOSITORY"
           echo "清理完成：保留最近 24 小时记录及所有未完成记录"
+
