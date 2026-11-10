@@ -24,7 +24,7 @@ jobs:
       PROJECT_DIR: v2ex
       SCRIPT_NAME: v2ex_checkin.py
       SCRIPT_DESC: V2EX 签到脚本
-      PRIVATE_REPO: jyucoeng/auto_v2ex_private
+      PRIVATE_REPO: doraemon6789/auto_v2ex_private
       WORK_DIR: ${{ github.repository_owner }}-${{ github.event.repository.name }}-v2ex
 
     steps:
@@ -162,3 +162,4 @@ jobs:
           delete_workflow_pattern: ${{ github.workflow }}
           retain_days: 7
           keep_minimum_runs: 5
+
