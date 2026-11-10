@@ -129,8 +129,16 @@ jobs:
           else
             TIMESTAMP=$(date +'%Y-%m-%d %H:%M:%S')
             git commit -m "⏱️ 更新 hohai 时间文件: $TIMESTAMP"
-            git fetch origin main
-            git push -f origin HEAD:main
-            echo "✅ 更改已推送"
+            for _try in 1 2 3; do
+              git fetch origin main
+              if git push origin HEAD:main; then
+                echo "✅ 更改已推送"
+                break
+              fi
+              echo "⚠️ 第 $_try 次推送被拒/失败，重试"
+              git fetch origin main
+              git reset --soft FETCH_HEAD
+              sleep 3
+            done
           fi
 
