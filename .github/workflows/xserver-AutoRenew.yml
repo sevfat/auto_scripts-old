@@ -39,7 +39,7 @@ jobs:
       - name: 🔐 检出私有仓库
         uses: actions/checkout@v4
         with:
-          repository: jyucoeng/auto_xserver_private
+          repository: doraemon6789/auto_xserver_private
           token: ${{ secrets.PRIVATE_REPO_TOKEN }}
           ref: main
           path: ${{ github.repository_owner }}-${{ github.event.repository.name }}-${{ env.PROJECT_DIR }}
@@ -246,3 +246,4 @@ jobs:
           else
             echo "⚠️ 截图目录不存在，无需清理"
           fi
+
